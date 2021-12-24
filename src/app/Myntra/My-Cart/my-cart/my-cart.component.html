@@ -1,0 +1,148 @@
+<div class="top-div-m">
+    <div class="row">
+        <div class="col-sm-8" style="font-size: larger; font-weight: 500; font-family: emoji;">
+            <img src='/../../../assets/myntra.png' alt="logo" width="50" height="40" (click)="Load_HomePage()"> 
+             
+        &nbsp; &nbsp;
+        <a style= "color: black" routerLink="/Myntra/MensWear" routerLinkActive="active">MENS</a>
+        &nbsp; &nbsp;
+        <a style= "color: black" routerLink="/Myntra/WomenWear" routerLinkActive="active">WOMEN</a>
+        &nbsp; &nbsp;
+        <a style= "color: black" routerLink="/Myntra" routerLinkActive="active">ACCESSORIES</a>
+        &nbsp; &nbsp;
+        <a style= "color: black" routerLink="/Myntra" routerLinkActive="active">KIDS</a>
+        &nbsp; &nbsp;
+        <a style= "color: black" routerLink="/Myntra" routerLinkActive="active">HOME & LIVING</a>
+        &nbsp; &nbsp;
+        <a style= "color: black" routerLink="/Myntra" routerLinkActive="active">BEAUTY</a>
+        &nbsp; &nbsp;
+        
+      </div>
+
+      <div class="col-sm-4" style="display: flex; justify-content: flex-end">
+     
+        <div class="col-lg-2" >
+            <div >
+                <img src='/../../../assets/profile.png' alt="logo" width="32" height="29">   
+             </div>
+             <label style=" padding-top: 3px;"> Profile  </label>
+          </div>
+
+          <div class="col-lg-2">
+            <div >
+                <img src='/../../../assets/wish.png' alt="logo" width="32" height="29">   
+             </div>
+             <label style=" padding-top: 3px;"> Wishlist  </label>
+            </div>
+
+            <div class="col-lg-2" (click)="go()">
+                <div >
+                    <img src='/../../../assets/bag.png' alt="logo" width="32" height="29">   
+                 </div>
+                 <label style="margin-left: 8px; padding-top: 3px;"> Cart  </label>
+            </div>
+    
+
+        
+        
+
+        </div>
+
+    </div>
+  </div>
+
+<div class="inner-container">
+    <div class="row">
+        <div class="col-sm-3" style="font-size: medium; font-weight: 300; font-family: emoji;">
+            <p>Home &nbsp; > Cart </p>
+        </div>
+    </div>
+
+<div class="row">
+        <table style="width: 100%; background: white; border: 0.5px solid black;" class="clstable"   >
+          <tr class="thead">
+            <td hidden="1">ID</td>
+            <td>Name </td>
+            <td>Price </td>
+            <td>Qty</td>
+            <td>Total</td>
+            <td>Delete</td>
+          </tr>
+          <tr class="tbody2" *ngFor="let row of CartData;">
+            <td style="width:75px; margin-left: -10px;" >{{row.Name}}</td>
+            <td style="width:75px; margin-left: -10px;" >{{row.Price}}</td>
+            <td><input
+               type="number"
+               class="form-control-sm"
+               style="width: 78px; height: 25px; text-align: center; font-weight: 400; font-size: 15 rem; font: 400 14px/20px Roboto, Helvetica  Neue, sans-serif;"
+               name="row.Qty"
+               [(ngModel)]="row.Qty"
+               (change)="Alter_Values(row)"
+               min="0"
+               /> </td>
+            <td style="width:75px; margin-left: -10px;" >{{row.Qty * row.Price}}</td>
+            <td><div style= "font-size: 60%;color: red; margin-left: 15px;" ><fa-icon [icon]="trashIcon" size="2x" (click)="delete_row(row.Id)" ></fa-icon></div></td>
+          </tr> 
+          <tr class="tbody2">
+            <td colspan="2">Total Amount </td>
+            <td> </td>
+            <td>{{Total_value}}</td>
+            <td></td>
+              
+          </tr>
+    
+        </table>
+      </div>
+    </div>
+
+
+<div class="inner-container">
+
+    <div class="row-footer">
+      <div class="font-footer"> Quick Links </div>
+      <div class="font-footer"> For Her </div>
+      <div class="font-footer"> For Him </div>
+      <div class="font-footer"> Get It From </div>
+      <div class="last-footer" >
+  </div>
+  
+  
+    <div class="row-footer">
+      <a class="col-footer" routerLink="/Myntra" routerLinkActive="active">Home</a>  
+      <a class="col-footer" routerLink="/Myntra" routerLinkActive="active">Women Jeans</a>  
+      <a class="col-footer" routerLink="/Myntra" routerLinkActive="active">Casual Wear</a>  
+      <img class="footer-icon" src='../../../assets/google_store_img.png' (click)="onImageClick()">  
+      <div class="last-footer" >
+  </div>
+  
+  <div class="row-footer">
+    <a class="col-footer" routerLink="/Myntra" routerLinkActive="active">About</a>
+    <a class="col-footer" routerLink="/Myntra" routerLinkActive="active">Tops and Shirts</a>  
+    <a class="col-footer" routerLink="/Myntra" routerLinkActive="active">Formal Pants & Shirts </a>    
+    <!-- <div class="col-footer">Play Store</div> -->
+      <div class="last-footer" >
+  </div>
+  
+  <div class="row-footer">
+    <a class="col-footer" routerLink="/Myntra" routerLinkActive="active">Cart</a>
+    <a class="col-footer" routerLink="/Myntra" routerLinkActive="active">Winter Wear</a>  
+    <a class="col-footer" routerLink="/Myntra" routerLinkActive="active">Winter Wear</a>  
+    <img class="footer-icon" src='../../../assets/apple_store_img.png' (click)="onImageClick()">  
+    <div class="last-footer" >
+  </div>
+  
+  <div class="row-footer">
+    <a class="col-footer" routerLink="/Myntra" routerLinkActive="active">Contact</a>
+    <a class="col-footer" routerLink="/Myntra" routerLinkActive="active">Fashion Accesories</a>  
+    <a class="col-footer" routerLink="/Myntra" routerLinkActive="active">Men's Accessories</a>  
+    <div class="last-footer" >
+  </div>
+  
+  
+  <div class="row-footer">
+    <a class="col-footer" routerLink="/Myntra" routerLinkActive="active">Help</a>
+    <div class="last-footer" >
+  </div>
+  
+  </div>
+  

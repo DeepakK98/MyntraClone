@@ -1,0 +1,113 @@
+<div
+  *ngIf="errorMsg"
+  class="alert alert-danger"
+  role="alert"
+  id="danger-alert"
+  style="
+    z-index: 999999 !important;
+    background-color: #b64645;
+    text-align: center !important;
+    color: white !important;
+    top: 0;
+    position: fixed;
+    width: 100%;
+  "
+>
+  {{ errorMsg }}
+  <button
+    type="button"
+    class="close"
+    (click)="errorMsg = ''"
+    aria-label="Close"
+  >
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+<div
+  *ngIf="userMsg"
+  class="alert alert-success"
+  role="alert"
+  id="danger-alert"
+  style="
+    z-index: 999999 !important;
+    background-color: #58a927;
+    text-align: center !important;
+    color: white !important;
+    top: 0;
+    position: fixed;
+    width: 100%;
+  "
+>
+  {{ userMsg }}
+  <button type="button" class="close" (click)="userMsg = ''" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+<div
+  *ngIf="Msg"
+  class="alert alert-warning"
+  role="alert"
+  id="danger-alert"
+  style="
+    z-index: 999999 !important;
+    text-align: center !important;
+    color: white;
+    background-color: #fe9e19;
+    top: 0;
+    position: fixed;
+    width: 100%;
+  "
+>
+  {{ Msg }}
+  <button type="button" class="close" (click)="Msg = ''" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div
+  class="top-div row"
+  style="box-shadow: 0px 0px 28px #ccc; margin-bottom: 3px"
+  *ngIf="false"
+>
+  <img
+    src="../../../assets/logo.png"
+    style="margin-top: 10px; object-fit: contain"
+  />
+  <p
+    style="
+      padding: 27px 13px 13px 0px;
+      color: #0084b4 !important;
+      font-size: 14px;
+      font-weight: bold;
+    "
+  >
+    {{ getCompanyName() }}
+  </p>
+  <p
+    style="
+      padding: 27px 10px 0px;
+      color: #0084b4 !important;
+      float: right;
+      font-size: 14px;
+      font-weight: bold;
+      margin-left: 472px;
+    "
+  >
+    {{ getUserName() }} ( {{ getLocation() }} - {{ getCurrentDate() }} )
+  </p>
+
+  <!-- <span class="fa fa-user userIcon" style="color: #0084b4"></span>
+
+  <i class="fa fa-bell not-icon-bell userIcon" style="color: #78862e"></i> -->
+
+  <span class="fa fa-power-off userIcon" style="color: red"></span>
+</div>
+<router-outlet></router-outlet>
+<ngx-spinner
+  bdColor="rgba(51, 51, 51, 0.8)"
+  size="medium"
+  type="ball-spin-clockwise"
+>
+  <p style="color: white">Please Wait.</p>
+</ngx-spinner>

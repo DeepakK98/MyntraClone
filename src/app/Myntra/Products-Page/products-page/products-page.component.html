@@ -1,0 +1,496 @@
+<div class="top-div-m">
+    <div class="row">
+        <div class="col-sm-8" style="font-size: larger; font-weight: 500; font-family: emoji;">
+            <img src='/../../../assets/myntra.png' alt="logo" width="50" height="40" (click)="Load_HomePage()"> 
+             
+        &nbsp; &nbsp;
+        <a style= "color: black" routerLink="/Myntra/MensWear" routerLinkActive="active">MENS</a>
+        &nbsp; &nbsp;
+        <a style= "color: black" routerLink="/Myntra/WomenWear" routerLinkActive="active">WOMEN</a>
+        &nbsp; &nbsp;
+        <a style= "color: black" routerLink="/Myntra" routerLinkActive="active">ACCESSORIES</a>
+        &nbsp; &nbsp;
+        <a style= "color: black" routerLink="/Myntra" routerLinkActive="active">KIDS</a>
+        &nbsp; &nbsp;
+        <a style= "color: black" routerLink="/Myntra" routerLinkActive="active">HOME & LIVING</a>
+        &nbsp; &nbsp;
+        <a style= "color: black" routerLink="/Myntra" routerLinkActive="active">BEAUTY</a>
+        &nbsp; &nbsp;
+        
+      </div>
+
+      <div class="col-sm-4" style="display: flex; justify-content: flex-end">
+     
+        <div class="col-lg-2" >
+            <div >
+                <img src='/../../../assets/profile.png' alt="logo" width="32" height="29">   
+             </div>
+             <label style=" padding-top: 3px;"> Profile  </label>
+          </div>
+
+          <div class="col-lg-2">
+            <div >
+                <img src='/../../../assets/wish.png' alt="logo" width="32" height="29">   
+             </div>
+             <label style=" padding-top: 3px;"> Wishlist  </label>
+            </div>
+
+            <div class="col-lg-2" (click)="go()">
+                <div >
+                    <img src='/../../../assets/bag.png' alt="logo" width="32" height="29">   
+                 </div>
+                 <label style="margin-left: 8px; padding-top: 3px;"> Cart  </label>
+            </div>
+    
+
+        
+        
+
+        </div>
+
+    </div>
+  </div>
+
+<div class="inner-container">
+    <div class="row">
+        <div class="col-sm-3" style="font-size: medium; font-weight: 300; font-family: emoji;">
+            <p>Home &nbsp; > Mens &nbsp;> Shirts</p>
+        </div>
+    </div>
+
+        
+        <div class="row">
+          <div style="width:15%">
+            <table style="width: 100%; background: white; border-right: 0.5px solid black;" class="clstable"   >
+              <tr class="thead">
+                <td hidden="1">ID</td>
+                <td>Categories </td>
+                <td></td>
+                <!-- <td>PO NO. </td> -->
+              </tr>
+              <tr class="tbody2" *ngFor="let row of categories$List;">
+                <td style="width:10px;"> <input style="margin-top: 1%; " type="checkbox"
+                     name="arr_select_chkbox[row.Id]" [(ngModel)]="arr_select_chkbox[row.Id]" /> </td>
+                  <td style="width:75px; margin-left: -10px;" >{{row.Name}}</td>
+              </tr> 
+        
+              <tr class="thead">
+                <td hidden="1">ID</td>
+                <td>Brands </td>
+                <td></td>
+                <!-- <td>PO NO. </td> -->
+              </tr>
+              <tr class="tbody2" *ngFor="let row of brands$List;">
+                <td style="width:10px;"> <input style="margin-top: 1%; " type="checkbox"
+                     name="arr_select_chkbox_1[row.Id]" [(ngModel)]="arr_select_chkbox_1[row.Id]" /> </td>
+                  <td style="width:75px; margin-left: -10px;" >{{row.Name}}</td>
+              </tr>
+
+              <tr class="thead">
+                <td hidden="1">ID</td>
+                <td>Price Range </td>
+                <td></td>
+                <!-- <td>PO NO. </td> -->
+              </tr>
+              <tr class="tbody2" *ngFor="let row of Price$List;">
+                <td style="width:10px;"> <input style="margin-top: 1%; " type="checkbox"
+                     name="arr_select_chkbox_2[row.Id]" [(ngModel)]="arr_select_chkbox_2[row.Id]" /> </td>
+                  <td style="width:75px; margin-left: -10px;" >{{row.Name}}</td>
+              </tr>
+
+              <tr class="thead">
+                <td hidden="1">ID</td>
+                <td>Discount % </td>
+                <td></td>
+                <!-- <td>PO NO. </td> -->
+              </tr>
+              <tr class="tbody2" *ngFor="let row of discount$List;">
+                <td style="width:10px;"> <input style="margin-top: 1%; " type="checkbox"
+                     name="arr_select_chkbox_3[row.Id]" [(ngModel)]="arr_select_chkbox_3[row.Id]" /> </td>
+                  <td style="width:75px; margin-left: -10px;" >{{row.Name}}</td>
+              </tr>
+            </table>
+          </div>
+
+            <div style="width:84%; margin-left: 5px;">
+
+            <div class="row">
+                    
+                    <div class="col-md-2">
+                        <div class="card">
+                        <div class="card-image">
+                            <img style=" width: 100%; height:  200px;" src='/../../../assets/shirts/S1.jfif'>
+                        </div>
+                        <div class="card-content" style="display: flex;">
+                            <p>Shirt 1</p>
+                            <div style= "font-size: 60%;; margin-left: 15px;" ><fa-icon [icon]="plusIcon" size="2x" (click)="addNewRow(1,1000)" ></fa-icon></div>
+                        </div>
+                        <div style=" margin-left: 15px;">    <p>Price : &nbsp; 1000 Rs</p>    </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-2">
+                        <div class="card">
+                        <div class="card-image">
+                            <img style=" width: 100%; height:  200px;" src='/../../../assets/shirts/S2.jfif'>
+                            <!-- <span class="card-title">Clothing Accessories</span> -->
+                        </div>
+                        <div class="card-content" style="display: flex;">
+                            <p>Shirt 2</p>
+                            <div style= "font-size: 60%;; margin-left: 15px;" ><fa-icon [icon]="plusIcon" size="2x" (click)="addNewRow(2,1200)"  ></fa-icon></div>
+                        </div>
+                        <div style=" margin-left: 15px;">    <p>Price : &nbsp; 1200 Rs</p>    </div>
+                        <!-- <div class="card-action">
+                            <a href="#">SHOP NOW</a>
+                        </div> -->
+                        </div>
+                    </div>
+
+
+                    
+                    <div class="col-md-2">
+                        <div class="card">
+                        <div class="card-image">
+                            <img style=" width: 100%; height:  200px;" src='/../../../assets/shirts/S3.jfif'>
+                            <!-- <span class="card-title">Clothing Accessories</span> -->
+                        </div>
+                        <div class="card-content" style="display: flex;">
+                            <p>Shirt 3</p>
+                            <div style= "font-size: 60%;; margin-left: 15px;" ><fa-icon [icon]="plusIcon" size="2x" (click)="addNewRow(3,1200)"  ></fa-icon></div>
+                        </div>
+                        <div style=" margin-left: 15px;">    <p>Price : &nbsp; 1200 Rs</p>    </div>
+                        <!-- <div class="card-action">
+                            <a href="#">SHOP NOW</a>
+                        </div> -->
+                        </div>
+                    </div>
+
+                    <div class="col-md-2">
+                        <div class="card">
+                        <div class="card-image">
+                            <img style=" width: 100%; height:  200px;" src='/../../../assets/shirts/S4.jfif'>
+                            <!-- <span class="card-title">Clothing Accessories</span> -->
+                        </div>
+                        <div class="card-content" style="display: flex;">
+                            <p>Shirt 4</p>
+                            <div style= "font-size: 60%;; margin-left: 15px;" ><fa-icon [icon]="plusIcon" size="2x" (click)="addNewRow(4,1200)"  ></fa-icon></div>
+                        </div>
+                        <div style=" margin-left: 15px;">    <p>Price : &nbsp; 1200 Rs</p>    </div>
+                        <!-- <div class="card-action">
+                            <a href="#">SHOP NOW</a>
+                        </div> -->
+                        </div>
+                    </div>
+                        
+                    <div class="col-md-2">
+                        <div class="card">
+                        <div class="card-image">
+                            <img style=" width: 100%; height:  200px;" src='/../../../assets/shirts/S5.jfif'>
+                            <!-- <span class="card-title">Clothing Accessories</span> -->
+                        </div>
+                        <div class="card-content" style="display: flex;">
+                            <p>Shirt 5</p>
+                            <div style= "font-size: 60%;; margin-left: 15px;" ><fa-icon [icon]="plusIcon" size="2x" (click)="addNewRow(5,1200)"  ></fa-icon></div>
+                        </div>
+                        <div style=" margin-left: 15px;">    <p>Price : &nbsp; 1200 Rs</p>    </div>
+                        <!-- <div class="card-action">
+                            <a href="#">SHOP NOW</a>
+                        </div> -->
+                        </div>
+                    </div>
+                        
+                    <div class="col-md-2">
+                        <div class="card">
+                        <div class="card-image">
+                            <img style=" width: 100%; height:  200px;" src='/../../../assets/shirts/S6.jfif'>
+                            <!-- <span class="card-title">Clothing Accessories</span> -->
+                        </div>
+                        <div class="card-content" style="display: flex;">
+                            <p>Shirt 6</p>
+                            <div style= "font-size: 60%;; margin-left: 15px;" ><fa-icon [icon]="plusIcon" size="2x" (click)="addNewRow(6,1200)"  ></fa-icon></div>
+                        </div>
+                        <div style=" margin-left: 15px;">    <p>Price : &nbsp; 1200 Rs</p>    </div>
+                        <!-- <div class="card-action">
+                            <a href="#">SHOP NOW</a>
+                        </div> -->
+                        </div>
+                    </div>
+                        
+
+            </div>
+
+
+            <div class="row">
+                    
+                <div class="col-md-2">
+                    <div class="card">
+                    <div class="card-image">
+                        <img style=" width: 100%; height:  200px;" src='/../../../assets/shirts/S7.jfif'>
+                        <!-- <span class="card-title">Clothing Accessories</span> -->
+                    </div>
+                    <div class="card-content" style="display: flex;">
+                        <p>Shirt 7</p>
+                        <div style= "font-size: 60%;; margin-left: 15px;" ><fa-icon [icon]="plusIcon" size="2x" (click)="addNewRow(7,1200)"  ></fa-icon></div>
+                    </div>
+                    <div style=" margin-left: 15px;">    <p>Price : &nbsp; 1200 Rs</p>    </div>
+                    <!-- <div class="card-action">
+                        <a href="#">SHOP NOW</a>
+                    </div> -->
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <div class="card">
+                    <div class="card-image">
+                        <img style=" width: 100%; height:  200px;" src='/../../../assets/shirts/S8.jfif'>
+                        <!-- <span class="card-title">Clothing Accessories</span> -->
+                    </div>
+                    <div class="card-content" style="display: flex;">
+                        <p>Shirt 8</p>
+                        <div style= "font-size: 60%;; margin-left: 15px;" ><fa-icon [icon]="plusIcon" size="2x" (click)="addNewRow(8,1200)"  ></fa-icon></div>
+                    </div>
+                    <div style=" margin-left: 15px;">    <p>Price : &nbsp; 1200 Rs</p>    </div>
+                    <!-- <div class="card-action">
+                        <a href="#">SHOP NOW</a>
+                    </div> -->
+                    </div>
+                </div>
+
+
+                
+                <div class="col-md-2">
+                    <div class="card">
+                    <div class="card-image">
+                        <img style=" width: 100%; height:  200px;" src='/../../../assets/shirts/S9.jfif'>
+                        <!-- <span class="card-title">Clothing Accessories</span> -->
+                    </div>
+                    <div class="card-content" style="display: flex;">
+                        <p>Shirt 9</p>
+                        <div style= "font-size: 60%;; margin-left: 15px;" ><fa-icon [icon]="plusIcon" size="2x" (click)="addNewRow(9,1200)"  ></fa-icon></div>
+                    </div>
+                    <div style=" margin-left: 15px;">    <p>Price : &nbsp; 1200 Rs</p>    </div>
+                    <!-- <div class="card-action">
+                        <a href="#">SHOP NOW</a>
+                    </div> -->
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <div class="card">
+                    <div class="card-image">
+                        <img style=" width: 100%; height:  200px;" src='/../../../assets/shirts/S10.jfif'>
+                        <!-- <span class="card-title">Clothing Accessories</span> -->
+                    </div>
+                    <div class="card-content" style="display: flex;">
+                        <p>Shirt 10</p>
+                        <div style= "font-size: 60%;; margin-left: 15px;" ><fa-icon [icon]="plusIcon" size="2x" (click)="addNewRow(10,1200)"  ></fa-icon></div>
+                    </div>
+                    <div style=" margin-left: 15px;">    <p>Price : &nbsp; 1200 Rs</p>    </div>
+                    <!-- <div class="card-action">
+                        <a href="#">SHOP NOW</a>
+                    </div> -->
+                    </div>
+                </div>
+                    
+                <div class="col-md-2">
+                    <div class="card">
+                    <div class="card-image">
+                        <img style=" width: 100%; height:  200px;" src='/../../../assets/shirts/S11.jfif'>
+                        <!-- <span class="card-title">Clothing Accessories</span> -->
+                    </div>
+                    <div class="card-content" style="display: flex;">
+                        <p>Shirt 11</p>
+                        <div style= "font-size: 60%;; margin-left: 15px;" ><fa-icon [icon]="plusIcon" size="2x" (click)="addNewRow(11,1200)"  ></fa-icon></div>
+                    </div>
+                    <div style=" margin-left: 15px;">    <p>Price : &nbsp; 1200 Rs</p>    </div>
+                    <!-- <div class="card-action">
+                        <a href="#">SHOP NOW</a>
+                    </div> -->
+                    </div>
+                </div>
+                    
+                <div class="col-md-2">
+                    <div class="card">
+                    <div class="card-image">
+                        <img style=" width: 100%; height:  200px;" src='/../../../assets/shirts/S12.jfif'>
+                        <!-- <span class="card-title">Clothing Accessories</span> -->
+                    </div>
+                    <div class="card-content" style="display: flex;">
+                        <p>Shirt 12</p>
+                        <div style= "font-size: 60%;; margin-left: 15px;" ><fa-icon [icon]="plusIcon" size="2x" (click)="addNewRow(12,1200)"  ></fa-icon></div>
+                    </div>
+                    <div style=" margin-left: 15px;">    <p>Price : &nbsp; 1200 Rs</p>    </div>
+                    <!-- <div class="card-action">
+                        <a href="#">SHOP NOW</a>
+                    </div> -->
+                    </div>
+                </div>
+                    
+
+        </div>
+
+
+        <div class="row">
+                    
+            <div class="col-md-2">
+                <div class="card">
+                <div class="card-image">
+                    <img style=" width: 100%; height:  200px;" src='/../../../assets/shirts/S13.jfif'>
+                    <!-- <span class="card-title">Clothing Accessories</span> -->
+                </div>
+                <div class="card-content" style="display: flex;">
+                    <p>Shirt 13</p>
+                    <div style= "font-size: 60%;; margin-left: 15px;" ><fa-icon [icon]="plusIcon" size="2x" (click)="addNewRow(13,1200)"  ></fa-icon></div>
+                </div>
+                <div style=" margin-left: 15px;">    <p>Price : &nbsp; 1200 Rs</p>    </div>
+                <!-- <div class="card-action">
+                    <a href="#">SHOP NOW</a>
+                </div> -->
+                </div>
+            </div>
+
+            <div class="col-md-2">
+                <div class="card">
+                <div class="card-image">
+                    <img style=" width: 100%; height:  200px;" src='/../../../assets/shirts/S14.jfif'>
+                    <!-- <span class="card-title">Clothing Accessories</span> -->
+                </div>
+                <div class="card-content" style="display: flex;">
+                    <p>Shirt 14</p>
+                    <div style= "font-size: 60%;; margin-left: 15px;" ><fa-icon [icon]="plusIcon" size="2x" (click)="addNewRow(14,1200)"  ></fa-icon></div>
+                </div>
+                <div style=" margin-left: 15px;">    <p>Price : &nbsp; 1200 Rs</p>    </div>
+                <!-- <div class="card-action">
+                    <a href="#">SHOP NOW</a>
+                </div> -->
+                </div>
+            </div>
+
+
+            
+            <div class="col-md-2">
+                <div class="card">
+                <div class="card-image">
+                    <img style=" width: 100%; height:  200px;" src='/../../../assets/shirts/S15.jfif'>
+                    <!-- <span class="card-title">Clothing Accessories</span> -->
+                </div>
+                <div class="card-content" style="display: flex;">
+                    <p>Shirt 15</p>
+                    <div style= "font-size: 60%;; margin-left: 15px;" ><fa-icon [icon]="plusIcon" size="2x" (click)="addNewRow(15,1200)"  ></fa-icon></div>
+                </div>
+                <div style=" margin-left: 15px;">    <p>Price : &nbsp; 1200 Rs</p>    </div>
+                <!-- <div class="card-action">
+                    <a href="#">SHOP NOW</a>
+                </div> -->
+                </div>
+            </div>
+
+            <div class="col-md-2">
+                <div class="card">
+                <div class="card-image">
+                    <img style=" width: 100%; height:  200px;" src='/../../../assets/shirts/S16.jfif'>
+                    <!-- <span class="card-title">Clothing Accessories</span> -->
+                </div>
+                <div class="card-content" style="display: flex;">
+                    <p>Shirt 16</p>
+                    <div style= "font-size: 60%;; margin-left: 15px;" ><fa-icon [icon]="plusIcon" size="2x" (click)="addNewRow(16,1200)"  ></fa-icon></div>
+                </div>
+                <div style=" margin-left: 15px;">    <p>Price : &nbsp; 1200 Rs</p>    </div>
+                <!-- <div class="card-action">
+                    <a href="#">SHOP NOW</a>
+                </div> -->
+                </div>
+            </div>
+                
+            <div class="col-md-2">
+                <div class="card">
+                <div class="card-image">
+                    <img style=" width: 100%; height:  200px;" src='/../../../assets/shirts/S17.jfif'>
+                    <!-- <span class="card-title">Clothing Accessories</span> -->
+                </div>
+                <div class="card-content" style="display: flex;">
+                    <p>Shirt 17</p>
+                    <div style= "font-size: 60%;; margin-left: 15px;" ><fa-icon [icon]="plusIcon" size="2x" (click)="addNewRow(17,1200)"  ></fa-icon></div>
+                  </div>
+                        <div style=" margin-left: 15px;">    <p>Price : &nbsp; 1200 Rs</p>    </div>
+                <!-- <div class="card-action">
+                    <a href="#">SHOP NOW</a>
+                </div> -->
+                </div>
+            </div>
+                
+            <div class="col-md-2">
+                <div class="card">
+                <div class="card-image">
+                    <img style=" width: 100%; height:  200px;" src='/../../../assets/shirts/S18.jfif'>
+                    <!-- <span class="card-title">Clothing Accessories</span> -->
+                </div>
+                <div class="card-content" style="display: flex;">
+                    <p>Shirt 18</p>
+                    <div style= "font-size: 60%;; margin-left: 15px;" ><fa-icon [icon]="plusIcon" size="2x" (click)="addNewRow(18,1200)"  ></fa-icon></div>
+                </div>
+                <div style=" margin-left: 15px;">    <p>Price : &nbsp; 1200 Rs</p>    </div>
+                <!-- <div class="card-action">
+                    <a href="#">SHOP NOW</a>
+                </div> -->
+                </div>
+            </div>
+                
+
+    </div>
+
+            </div>
+        </div>
+    </div>
+
+
+<div class="inner-container">
+
+    <div class="row-footer">
+      <div class="font-footer"> Quick Links </div>
+      <div class="font-footer"> For Her </div>
+      <div class="font-footer"> For Him </div>
+      <div class="font-footer"> Get It From </div>
+      <div class="last-footer" >
+  </div>
+  
+  
+    <div class="row-footer">
+      <a class="col-footer" routerLink="/Myntra" routerLinkActive="active">Home</a>  
+      <a class="col-footer" routerLink="/Myntra" routerLinkActive="active">Women Jeans</a>  
+      <a class="col-footer" routerLink="/Myntra" routerLinkActive="active">Casual Wear</a>  
+      <img class="footer-icon" src='../../../assets/google_store_img.png' (click)="onImageClick()">  
+      <div class="last-footer" >
+  </div>
+  
+  <div class="row-footer">
+    <a class="col-footer" routerLink="/Myntra" routerLinkActive="active">About</a>
+    <a class="col-footer" routerLink="/Myntra" routerLinkActive="active">Tops and Shirts</a>  
+    <a class="col-footer" routerLink="/Myntra" routerLinkActive="active">Formal Pants & Shirts </a>    
+    <!-- <div class="col-footer">Play Store</div> -->
+      <div class="last-footer" >
+  </div>
+  
+  <div class="row-footer">
+    <a class="col-footer" routerLink="/Myntra" routerLinkActive="active">Cart</a>
+    <a class="col-footer" routerLink="/Myntra" routerLinkActive="active">Winter Wear</a>  
+    <a class="col-footer" routerLink="/Myntra" routerLinkActive="active">Winter Wear</a>  
+    <img class="footer-icon" src='../../../assets/apple_store_img.png' (click)="onImageClick()">  
+    <div class="last-footer" >
+  </div>
+  
+  <div class="row-footer">
+    <a class="col-footer" routerLink="/Myntra" routerLinkActive="active">Contact</a>
+    <a class="col-footer" routerLink="/Myntra" routerLinkActive="active">Fashion Accesories</a>  
+    <a class="col-footer" routerLink="/Myntra" routerLinkActive="active">Men's Accessories</a>  
+    <div class="last-footer" >
+  </div>
+  
+  
+  <div class="row-footer">
+    <a class="col-footer" routerLink="/Myntra" routerLinkActive="active">Help</a>
+    <div class="last-footer" >
+  </div>
+  
+  </div>
+  

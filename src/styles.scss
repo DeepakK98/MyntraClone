@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "../node_modules/ag-grid-community/dist/styles/ag-grid.css";
+@import "../node_modules/ag-grid-community/dist/styles/ag-theme-alpine.css";
+
+@import "../node_modules/@fullcalendar/common/main.css";
+@import "../node_modules/@fullcalendar/daygrid/main.css";
+
+body {
+  background-color: #e9ecf3 !important;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.filterLabel {
+  font-size: small;
+  font-weight: 500;
+}
+
+.disabledInput {
+  cursor: not-allowed;
+}

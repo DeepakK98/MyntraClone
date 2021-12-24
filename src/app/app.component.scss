@@ -1,0 +1,75 @@
+.btn-lg {
+  width: 100%;
+}
+
+.top-div {
+  background-color: white;
+  box-shadow: 0px 0px 28px #ccc;
+  margin-bottom: 3px;
+}
+
+.inner-container {
+  background-color: white;
+  margin: 20px;
+  padding: 20px;
+}
+
+.row {
+  padding: 5px;
+}
+
+.userIcon {
+  font-size: 23px;
+  padding: 27px 10px 0px;
+}
+
+.userIcon:hover {
+  background: #0084b4;
+  color: white !important;
+  cursor: pointer;
+}
+
+:host::ng-deep {
+  .ag-header-row-column {
+    background: #5f8b95 !important;
+    color: white;
+    font-weight: 500;
+  }
+  .ag-header-viewport {
+    background: #5f8b95 !important;
+    color: white;
+  }
+  .ag-header-cell {
+    padding-left: 5px;
+    padding-right: 5px;
+    background: #5f8b95 !important;
+  }
+  .ag-header-icon {
+    opacity: 1;
+  }
+  .ag-icon {
+    color: white;
+  }
+  .ag-cell {
+    line-height: 23px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-right: 1px solid darkgray !important;
+  }
+  .ag-paging-panel {
+    background: #5f8b95 !important;
+    height: 25px !important;
+    color: white;
+  }
+}
+
+:host ::ng-deep {
+  .btn {
+    min-width: 90px !important;
+    font-size: small;
+  }
+  .btn-warning {
+    background: #c49f47 !important;
+    color: white !important;
+  }
+}

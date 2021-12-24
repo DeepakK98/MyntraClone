@@ -1,0 +1,234 @@
+.top-div-m {
+    background-color: white;
+    padding-top: 10px;
+  }
+  
+  .inner-container {
+    background-color: white;
+    margin: 10px;
+    padding: 10px;
+  }
+  
+  
+  .row {
+    padding: 5px;
+    margin: 0;
+  }
+  
+  .save {
+    padding-top: 4px;
+    padding-right: 12px !important;
+    padding-bottom: 4px !important;
+    padding-left: 12px !important;
+    border: 1px solid #78862e !important;
+    color: #ffffff !important;
+    background: #78862e;
+    font-size: small;
+    width: 90px;
+    cursor: pointer;
+  }
+  
+  .display {
+    padding-top: 4px;
+    padding-right: 12px !important;
+    padding-bottom: 4px !important;
+    padding-left: 12px !important;
+    border: 1px solid #78862e !important;
+    color: #ffffff !important;
+    background: #0b8dc0 !important;
+    font-size: small;
+    width: 90px;
+    cursor: pointer;
+  }
+  
+  .gridLabel {
+    font-size: 15px;
+    font-weight: 500;
+    margin: 5px;
+  }
+  
+  #filterOn {
+    color: red;
+  }
+  
+  #filterOff {
+    color: black;
+  }
+
+  .body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    
+  }
+
+  .divbtn{
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    // border-radius: 4px;
+    text-decoration: none;
+
+    color: #333;
+    background-color: rgb(4, 170, 109);
+    border-color: #ccc;
+    border-radius: 23px;
+}
+
+.divbtn2{
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  // border-radius: 4px;
+  text-decoration: none;
+
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+}
+
+:host::ng-deep {
+  .btn, .btn-large, .btn-small {
+    color: black;
+    background-color: white;
+  }
+
+}
+
+
+
+.font-footer{
+  float: left;
+  width: 24%;
+  font-family: math;
+  font-size: 24px;
+  margin-left: 10px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-style: revert;
+  font-weight: bold;
+}
+
+
+.col-footer
+{
+    float: left;
+    width: 23%;
+    margin-left: 25px;
+    margin-bottom: 10px;
+    color: black
+}
+
+.last-footer{
+    clear: left;
+}
+
+.row-footer{
+    border: 0px solid green;
+}
+
+.footer-icon{
+  height: 3%;
+  width: 7%;
+  float: left;
+  margin-left: 25px;
+}
+
+
+.parallax{
+  background-image: url('/../../../assets/Mens/G1.jfif');
+  background-size: cover;
+  background-attachment: fixed;
+  height: 500px;
+}
+
+.text-style-parallax{
+  margin-top: 53px;
+    margin-left: 70px;
+    font-size: 29px;
+    color: white;
+    margin-left: 56%;
+}
+
+
+
+.clstable>.thead>td{
+    border-bottom: 1px solid grey;
+    text-align: center;
+      padding: 5px;
+      color: #083573;
+      font-size: 14 rem;
+      font-weight: 500 !important;
+  }
+  .clstable>.tbody>td{
+  
+    text-align: center;
+      padding: 10px;
+      padding-bottom: 0px;
+      color:black;
+      font-weight: 400;
+      font-size: 15 rem;
+  }
+  .clstable>.tbody1>td{
+  
+    text-align: center;
+      padding:5px;
+      padding-top: 0px;
+      color:black;
+      font-weight: 400;
+      font-size: 15 rem;
+  }
+  .clstable>.tbody2>td{
+  
+    text-align: center;
+      padding: 3px;
+      padding-bottom: 0px;
+      color:black;
+      font-weight: 400;
+      font-size: 15 rem;
+  }
+
+.clstable>tr {
+    border: 0px !important;
+}
+
+  input[type=checkbox]
+{
+  -webkit-appearance:checkbox !important;
+  display: inline !important;
+  opacity: 10;
+  position: inherit;
+  pointer-events: all;
+}
+
